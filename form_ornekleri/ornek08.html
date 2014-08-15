@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>LYK 2014</title>
+<style>
+fieldset {
+  width: 400px;
+  border: 2px dashed #ccc;
+}
+.borders legend {
+  font-weight: bold;
+}
+</style>
+</head>
+<body>
+  <form id="formtest" name="formtest" method="post" action="">
+    <fieldset class="borders">
+      <legend>İsim ve Şifre</legend>
+      <label for="isim">İsminiz</label>
+      <input type="text" name="isim" id="isim" placeholder="İsminizi yazınız!!">
+      <br>
+      <label for="sifre">Şifre</label>
+      <input type="password" name="sifre" id="sifre" placeholder="Şifrenizi yazınız...">
+      <br>
+      </fieldset>
+      <br>
+      <div>Seçiminiz:</div>
+      <br>
+      <input type="checkbox" name="secenek" value="cicek">Çiçek<br>
+      <input type="checkbox" name="secenek" value="kolonya">Kolonya
+      <br>
+      <label for="yorum">Yorumunuz:</label>
+      <br>
+      <textarea name="yorum" id="yorum" cols="25" rows="10"></textarea>
+      <br>
+      <br>
+      <label for="arabalar">Arabalar:</label>
+      <br>
+      <select name="arabalar" id="arabalar">
+        <option value="volvo">Volvo</option>
+        <option value="saab">Saab</option>
+        <option value="mercedes" selected>Mercedes</option>
+        <option value="audi">Audi</option>
+      </select>
+      <br>
+      <br>
+      <button type="submit">Gönder</button>
+  </form>
+</body>
+</html>

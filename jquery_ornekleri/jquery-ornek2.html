@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>LYK 2014 jQuery</title>
+<style>
+#formtest {
+  width: 600px;
+}
+fieldset {
+  border: 2px dashed #ccc;
+}
+.kenarlik legend {
+  font-weight: bold;
+}
+.eklenen label {
+  padding-right: 5px;
+  float: left;
+}
+.eklenen input {
+  width: 350px;
+  display: block;
+}
+</style>
+<script src="jquery-1.11.1.js"></script>
+<script>
+$(document).ready(function() {
+  $("button#hazirla").click(function() {
+    $("fieldset.kenarlik").append("<div class=\"eklenen\">", "</div>");
+    $("fieldset.kenarlik div.eklenen").append("<hr>", "<p>Eklenen Elemanlar</p>");
+    $("button").removeAttr("disabled", "disabled");
+    $(this).attr("disabled", "disabled");
+  });
+  $("button#ekle").click(function(){
+    $("fieldset.kenarlik div.eklenen").append("<label for=\"isim\">Yeni Giriş:</label>");
+    $("fieldset.kenarlik div.eklenen").append("<input type=\"text\" name=\"isim\" placeholder=\"Bu bir yer doldurucudur.\">");
+  });
+  $("button#sil").click(function() {
+    $("fieldset.kenarlik div.eklenen label").last().remove();
+    $("fieldset.kenarlik div.eklenen input[name='isim']").last().remove();
+  });
+});
+</script>
+</head>
+<body>
+  <form id="formtest" name="formtest" method="post" action="">
+    <fieldset class="kenarlik">
+      <legend>jQuery Örneği</legend>
+        <p>İlk eleman:</p>
+        <label for="veri">Veri: </label>
+        <input type="text" name="veri" id="veri" placeholder="Bu bir yer doldurucudur.">
+    </fieldset>
+    <br>
+      <button id="hazirla" type="button">Hazırla</button>
+      <button id="ekle" type="button" disabled="disabled">Ekle</button>
+      <button id="sil" type="button" disabled="disabled">Sil</button>
+  </form>
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>LYK 2014 jQuery</title>
+<style>
+#formtest {
+  width: 600px;
+}
+fieldset {
+  border: 2px dashed #ccc;
+}
+.kenarlik legend {
+  font-weight: bold;
+}
+.eklenen label {
+  padding-right: 5px;
+}
+.eklenen input {
+  width: 350px;
+}
+</style>
+<script src="jquery-1.11.1.js"></script>
+<script>
+$(document).ready(function() {
+  $("button#ekle").click(function(){
+    $("fieldset.kenarlik").append("<div class=\"eklenen\">");
+    $("fieldset.kenarlik div.eklenen").append("<hr>");
+    $("fieldset.kenarlik div.eklenen").append("<p>Eklenen Elemanlar</p>");
+    $("fieldset.kenarlik div.eklenen").append("<label for=\"isim\">Veri:</label>");
+    $("fieldset.kenarlik div.eklenen").append("<input type=\"text\" name=\"isim\" placeholder=\"Bu bir yer doldurucudur.\">");
+    $("fieldset.kenarlik").append("</div>");
+  });
+  $("button#sil").click(function() {
+    $("fieldset.kenarlik div.eklenen").last().remove();
+  });
+});
+</script>
+</head>
+<body>
+  <form id="formtest" name="formtest" method="post" action="">
+    <fieldset class="kenarlik">
+      <legend>jQuery Örneği</legend>
+        <p>İlk eleman:</p>
+        <label for="veri">Veri: </label>
+        <input type="text" name="veri" id="veri" placeholder="Bu bir yer doldurucudur.">
+    </fieldset>
+    <br>
+      <button id="ekle" type="button">Ekle</button>
+      <button id="sil" type="button">Sil</button>
+  </form>
+</body>
+</html>

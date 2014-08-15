@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>LYK 2014</title>
+<style>
+#formtest {
+  width: 600px;
+}
+fieldset {
+  border: 2px dashed #ccc;
+}
+.borders legend {
+  font-weight: bold;
+}
+.sol-taraf {
+  float: left;
+}
+.sag-taraf {
+  float: right;
+}
+.orta {
+  display: table;
+  margin: 0 auto;
+}
+</style>
+</head>
+<body>
+  <form id="formtest" name="formtest" method="post" action="">
+    <fieldset class="borders">
+      <legend>İsim ve Şifre</legend>
+      <div class="sol-taraf">
+        <label for="isim">İsminiz</label>
+        <input type="text" name="isim" id="isim" placeholder="İsminizi yazınız!!">
+        <br>
+        <label for="sifre">Şifre</label>
+        <input type="password" name="sifre" id="sifre" placeholder="Şifrenizi yazınız...">
+      </div>
+      <div class="sag-taraf">
+        <div>Seçiminiz:</div>
+        <br>
+        <input type="checkbox" name="secenek" value="cicek">Çiçek<br>
+        <input type="checkbox" name="secenek" value="kolonya">Kolonya
+        <br>
+        <label for="yorum">Yorumunuz:</label>
+        <br>
+        <textarea name="yorum" id="yorum" cols="25" rows="10"></textarea>
+        <br>
+        <br>
+        <label for="arabalar">Arabalar:</label>
+        <br>
+        <select name="arabalar" id="arabalar">
+          <option value="volvo">Volvo</option>
+          <option value="saab">Saab</option>
+          <option value="mercedes" selected>Mercedes</option>
+          <option value="audi">Audi</option>
+        </select>
+      </div>
+    </fieldset>
+    <br>
+    <div class="orta">
+      <button type="submit">Gönder</button>
+      <button type="reset">Reset</button>
+    </div>
+  </form>
+</body>
+</html>
