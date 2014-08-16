@@ -4,18 +4,21 @@
 <meta charset="UTF-8">
 <title>LYK 2014</title>
 <style>
+/* "fieldset" isaretlerinin tamamina asagidaki ozellikleri katalim */ 
 fieldset {
   width: 400px;
   border: 2px dashed #ccc;
 }
-.borders legend {
+/* kenarlik sinifi altindaki "legend" isareti icin atanan CSS kodlari */
+.kenarlik legend {
   font-weight: bold;
 }
 </style>
 </head>
 <body>
   <form id="formtest" name="formtest" method="post" action="">
-    <fieldset class="borders">
+    <!-- HTML class ozniteliklerinin kullanimi -->
+    <fieldset class="kenarlik">
       <legend>İsim ve Şifre</legend>
       <label for="isim">İsminiz</label>
       <input type="text" name="isim" id="isim" placeholder="İsminizi yazınız!!">

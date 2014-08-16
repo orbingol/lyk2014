@@ -4,30 +4,36 @@
 <meta charset="UTF-8">
 <title>LYK 2014</title>
 <style>
+/* id=formtest olan HTML elemanlarina atanan ozellikler */ 
 #formtest {
-  width: 600px;
+  width: 600px; /* genislik ayarla */
 }
+/* Tum "fieldset" elemanlari icin atanan ozellikler */
 fieldset {
-  border: 2px dashed #ccc;
+  border: 2px dashed #ccc; /* kenarlik ekle */
 }
-.borders legend {
-  font-weight: bold;
+/* class=kenarlik altinda bulunan "legend" elemanlari icin atanan ozellikler */
+.kenarlik legend {
+  font-weight: bold; /* yazilari kalinlastir */
 }
+/* class=sol-taraf seklinde olusturulan elemanlara atanan ozellikler */
 .sol-taraf {
-  float: left;
+  float: left; /* sola cek */
 }
+/* class=sag-taraf seklinde olusturulan elemanlara atanan ozellikler */
 .sag-taraf {
-  float: right;
+  float: right; /* saga cek */
 }
+/* class=orta seklinde olusturulan elemanlara atanan ozellikler */
 .orta {
-  display: table;
-  margin: 0 auto;
+  display: table; /* tablo gibi goster */
+  margin: 0 auto; /* elemanlari ortala, yani "align center" */
 }
 </style>
 </head>
 <body>
   <form id="formtest" name="formtest" method="post" action="">
-    <fieldset class="borders">
+    <fieldset class="kenarlik">
       <legend>İsim ve Şifre</legend>
       <div class="sol-taraf">
         <label for="isim">İsminiz</label>
